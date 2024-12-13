@@ -1,0 +1,88 @@
+body
+{
+    background-color:rgb(254, 234, 244);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+     align-items: center;
+    height: 100vh;
+    margin: 0; 
+}
+
+.mainContainer
+{
+    /* border: solid black; */
+    /* border-style:double; */
+    background-color:rgb(254, 202, 226);
+    border-radius: 40px;
+    height: 80vh;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 6px 10px;
+}
+
+h3
+{
+  position: relative;
+  top: -40px;
+}
+
+.information
+{
+    border: solid black;
+    background-color: white;
+    border-radius: 10px;
+    height: 100px;
+    margin: 10px;
+    margin-top: -40px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.displayWord
+{
+
+}
+
+
+   
+
+#inputText
+{
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+   
+}
+
+
+.textBoxstyle
+{
+    /* border: 2px solid black;
+    width: 80%;
+    
+    margin-top: 5px;
+    margin-bottom: 12px;
+    padding:5px; */
+    border-radius: 5px;
+    margin-top: px;
+}
+
+.information p
+{
+    font-size: 14px;
+    
+}
+
+.buttonInfo
+{
+    border: solid red;
+    height: 30px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
