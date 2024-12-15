@@ -26,61 +26,60 @@ h1{
     font-size: 30px;
   }
 
-  #inputInfo
+  .inputInfo
 {
     
-    border: solid black;
-    background-color: white;
+    /* border: solid black; */
+    /* background-color: white; */
     border-radius: 10px;
     height: 100px;
     margin: 10px;
     margin-top: -40px;
     text-align: left;
     padding-left: 5px;
-}
-
-.displayWord
-{
-
+    align-items: center;
 }
 
 
-   
 
 .inputText
 {
     width: 60px;
     height: 25px;
     text-align: center;
+    margin-left: 90px;
     margin-bottom: 20px;
    
 }
 
 
-.textBoxstyle
+
+.information
 {
-    /* border: 2px solid black;
-    width: 80%;
-    
-    margin-top: 5px;
-    margin-bottom: 12px;
-    padding:5px; */
-    border-radius: 5px;
-    margin-top: px;
+    border: solid black;
+    background-color: aliceblue;
+    border-radius: 10px;
+   height: auto;
 }
 
 .information p
 {
     font-size: 14px;
+    margin-left: 10px;
+}
+
+.reset-btn
+{
+    height: 30px;
+    margin: 10px;
+    padding-top: 5px;
+    display: flex;
+    justify-content:center;
+    margin-left: 90px;
     
 }
 
-.buttonInfo
+.reset-btn:hover
 {
-    border: solid red;
-    height: 30px;
-    margin: 10px;
-    display: flex;
-    justify-content: space-evenly;
-    
+    background: #e17cb2;
 }
