@@ -129,7 +129,7 @@ let wordData= [
         hint: "  Which gas do humans breathe in?"
     },
     {
-        word: "Yen",
+        word: "yen",
         hint: "What is the currency of Japan?"
     },
     {
@@ -177,7 +177,8 @@ const guessLeft = document.querySelector(".guess-left span");
 
 const resetBtn = document.getElementById("reset-btn");
 
-function randomWord() {
+function randomWord() 
+{
     let randomItm = wordData[Math.floor(Math.random() * wordData.length)];
     word = randomItm.word;
     if (word.length >= 5) {
@@ -189,56 +190,62 @@ function randomWord() {
     guessLeft.innerText = maxCheck;
 
     // Remove any previous input elements before adding new ones
+    inputText.value="";
     inputs.innerHTML = "";
 
     // Use append() to dynamically add input fields
-    for (let i = 0; i < word.length; i++) {
+    for (let i = 0; i < word.length; i++) 
+        {
         const inputElement = document.createElement('input');
         inputElement.setAttribute('type', 'text');
         inputElement.setAttribute('maxlength', '1'); // Only one letter per input
 
         inputElement.classList.add('inputAppend');
         inputs.append(inputElement); // Using append() to add input elements
-
-        inputText.value = '';
-        inputText.focus();
-    }
-   
+     
+       }   
 }
-
-
 
 randomWord();
 
-function initGame(e) 
-{
+function initGame(e) {
     let key = e.target.value.toLowerCase();
-    if (key.match(/^[A-Za-z]+$/) && !correctLetter.includes(key)) {
-        if (word.includes(key)) {
+    if(key.match(/^[A-Za-z]+$/) &&  !correctLetter.includes(key)) {
+        if(word.includes(key)) {
             for (let i = 0; i < word.length; i++) {
-                if (word[i] === key) {
-                    correctLetter.push(key);
+                if(word[i] == key) {
+                    correctLetter += key;
                     inputs.querySelectorAll("input")[i].value = key;
                 }
             }
         } else {
             maxCheck--;
+          
         }
         guessLeft.innerText = maxCheck;
+   
     }
+    // inputText.value = "";
+    let typetext= inputText.value;
+    console.log(inputText);
+
 
     setTimeout(() => {
-        if (correctLetter.length === word.length) {
+        if(correctLetter.length === word.length) 
+            {
+            
             alert(`Congrats! You found the word ${word.toUpperCase()}`);
             return randomWord();
-        } else if (maxCheck < 1) {
+        } else if(maxCheck < 1) {
             alert("Game over! You don't have remaining guesses");
-            for (let i = 0; i < word.length; i++) {
+            for(let i = 0; i < word.length; i++) {
                 inputs.querySelectorAll("input")[i].value = word[i];
             }
         }
     }, 100);
 }
+
+
 
 resetBtn.addEventListener("click", randomWord);
 inputText.addEventListener("input", initGame);
