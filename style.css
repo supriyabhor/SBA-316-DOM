@@ -40,7 +40,12 @@ h1{
     align-items: center;
 }
 
-
+.inputAppend 
+{
+    width: 30px;
+    justify-content:space-between;
+    margin: 3px;
+}
 
 .inputText
  {  
