@@ -1,69 +1,169 @@
 let wordData= [
-   {
-      hint : "Which planet is known as the “Blue Planet”?",
-      word : "Earth"
-   },
-   {
-      hint : "Bill Gates is the founder of which company?",
-      word : "Microsoft"
-   },
-   {
-        hint : "Larry Page is the CEO of which company?",
-        word : "Google"
-   },
-   {    
-        hint : "What is Hewlett Packard (HP) originally known for?",
-        word : "Printers"
-   },
-   {
-        hint : "In the story of Snow White, how many dwarfs are there?",
-        word : "Seven"
-   },
-   {
-        hint : "What is the chemical symbol for the element mercury?",
-        word : "Hg"
-   },
-   {
-       hind : "How many colors are there in a rainbow?",
-       word : "Seven"
-   },
-   {
-        hind : "What animal is known for its long trunk and large ears?",
-        word : "Elephant"
-   },
-   {
-         hind : "Which planet is known as the “Red Planet”?",
-        word : "Mars"
-   },
-   {
-        hind :  "What part of the atom has no electric charge?",
-        word : "Neutron"
-   },
-   {
-        hind : "What animals are pearls found in?",
-        word : "Oysters"
-   },
-   {
-        hind : "How many molecules of oxygen does ozone have?",
-        word : "Three"
-   },
-   {
-        hind : "Which planet has the most gravity?",
-        word : "Jupiter"
-   },
-   {
-        hind : "Which continent is the largest?",
-        word : "Asia"
-   },
     {
-        hind : "Which country is known as the Land of the Rising Sun?",
-        word : "Japan"
+        word: "java",
+        hint: "programming language"
     },
     {
-        hind : "What animal is on Levi’s logo?",
-        word : "Horse"
+        word: "yellow",
+        hint: "color of sun"
     },
-       
+    {
+        word: "aim",
+        hint: "a purpose or intention"
+    },
+    {
+        word: "venus",
+        hint: "planet of our solar system"
+    },
+   
+    {
+        word: "coding",
+        hint: "related to programming"
+    },
+    {
+        word: "matrix",
+        hint: "science fiction movie"
+    },
+    {
+        word: "bugs",
+        hint: "related to programming"
+    },
+    {
+        word: "avatar",
+        hint: "epic science fiction film"
+    },
+    {
+        word: "gold",
+        hint: "a yellow precious metal"
+    },
+    {
+        word: "ebay",
+        hint: "online shopping site"
+    },
+    {
+        word: "golang",
+        hint: "programming language"
+    },
+    {
+        word: "island",
+        hint: "land surrounded by water"
+    },
+    {
+        word: "hockey",
+        hint: "a famous outdoor game"
+    },
+    {
+        word: "chess",
+        hint: "related to an indoor game"
+    },
+    {
+        word: "viber",
+        hint: "a social media app"
+    },
+    {
+        word: "github",
+        hint: "code hosting platform"
+    },
+    {
+        word: "png",
+        hint: "a image file format"
+    },
+    {
+        word: "silver",
+        hint: "precious greyish-white metal"
+    },
+    {
+        word: "mobile",
+        hint: "an electronic device"
+    },
+    {
+        word: "google",
+        hint: "famous search engine"
+    },
+    {
+        word: "excel",
+        hint: "microsoft product for windows"
+    },
+    {
+        word: "mysql",
+        hint: "a relational database system"
+    },
+    {
+        word: "nepal",
+        hint: "developing country name"
+    },
+    {
+        word: "flute",
+        hint: "a musical instrument"
+    },
+    {
+        word: "crayons",
+        hint: "What do you use to color pictures?"
+    },
+    {
+        word: "earth",
+        hint: "What is the name of the planet we live on?"
+    },
+    {
+        word: "mars",
+        hint: "planet of our solar system"
+    },
+    {
+        word: "mars",
+        hint: " which planet is a red planet"
+    },
+    {
+        word: "Fall",
+        hint: "Which season comes after summer when leaves fall from trees?"
+    },
+    {
+        word: "Blue Whale",
+        hint: " the largest mammal in the world?"
+    },
+    {
+        word: "mercury",
+        hint: "the smallest planet in our solar system?"
+    },
+    {
+        word: "oxygen",
+        hint: "  Which gas do humans breathe in?"
+    },
+    {
+        word: "Yen",
+        hint: "What is the currency of Japan?"
+    },
+    {
+        word: "jpeg",
+        hint: "a image file format"
+    },
+    {
+        word: "jupiter",
+        hint: "the largest planet in our solar system?"
+    },
+    {
+        word: "key",
+        hint: "small piece of metal"
+    },
+    {
+        word: "H2O",
+        hint: "What is the chemical symbol for water?"
+    },
+    {
+        word: "paris",
+        hint: "the capital city of France?"
+    },
+    {
+        word: "dubai",
+        hint: "developed country name"
+    },
+    {
+        word: "photo",
+        hint: "representation of person or scene"
+    },
+    {
+        word: "nile",
+        hint: "largest river in the world"
+    },
 ];
 
 let word;
