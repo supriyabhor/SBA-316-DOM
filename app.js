@@ -171,7 +171,14 @@ let maxcCheck;
 let correctLetter=[];
 
 const inputs = document.querySelector(".inputs");
-const inputText = document.getElementsByClassName(".inputText");
+const inputText = document.querySelector(".inputText");
 const hintTag = document.querySelector(".hint span");
 const guessLeft = document.querySelector(".guess-left span");
-const resetbtn = document.querySelector(".reset-btn");
+
+const resetbtn = document.getElementById("reset-btn");
+resetbtn.addEventListener("click");
+
+function randomWordData()
+{
+
+}
