@@ -78,22 +78,85 @@ let wordData= [
        
 ];
 
+let word;
+let maxGuess ;
+let correctLetters = [];
+let attemptCount = 5 ;
 
-let attemptCount = 4 ;
 
-const hintTab = document.querySelector(".hint");
-const totalAttemptTab = document.querySelector(".totalAttempt");
+const wordDisplay = querySelector(".displayWord");
+const hintTab = document.querySelector(".hint span");
+const totalAttemptTab = document.querySelector(".totalAttempt span");
+const resetButton = document.getElementById ("#resetBtn");
 const inputTextTab = document.getElementById ("#inputText");
-const buttonCheck = document.getElementById ("#checkBtn");
-const buttonReset = document.getElementById ("#resetBtn");
+const output= document.querySelector(".output");
 
-
- 
-
-
-function buttonFun ()
+function randomWord()
 {
-  
-   
-  
+    let randomItm = wordData[Math.floor(Math.random()* wordData.length)];
+    word = randomItm.word;
+
+    maxGuess = word.length >=5;
+    correctLetters = [];
+    hintTab.innerText = randomItm.hint;
+    totalAttemptTab.innerText = randomItm.maxGuess;
+
+    let html = "";
+    for(let i=0; i<word.length; i++)
+    {
+        html +=`<input type="text" disabled>`;
+        inputTextTab.innerHTML=html;
+    }
+
 }
+
+randomWord();
+
+
+
+function startGame(g)
+{
+    let key=g.target.value.toLowerCase();
+    if (key.match (/^[A-Za-z]+$/) && !correctLetters.includes(key))
+    {
+        if(word.includes(key))
+        {
+            for(let i=0 ; i< word.length; i++)
+            {
+                if(word[i]== key)
+                {
+                    correctLetters +=key;
+                    wordDisplay.querySelector("input")[i].value=key;
+                }
+
+            }
+        } else 
+        {
+            maxGuess--;
+        }
+        totalAttemptTab.innerText = maxGuess;
+    }
+    inputTextTab.value = "";
+
+     timeCheck(()=> {
+        if(correctLetters.length ===word.length)
+                       {
+                         output.innerText = "Congrats!";
+                         output.Style.disply="block";
+                         return randomWord();
+                       } else if(maxGuess < 1)
+                       {
+                        output.innerText = "GAME OVER!!";
+                       output.Style.disply= "block";
+                        
+                       for(let i=0 ; i<word.length; i++)
+                       {
+                        wordDisplay.querySelectorAll("input"[i].valueOf = word[i]);
+                       }
+                        }
+     }, 100)
+   
+}
+
+
+inputTextTab.addEventListener("input". startGame);
