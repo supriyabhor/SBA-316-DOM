@@ -11,8 +11,7 @@ body
 
 .mainContainer
 {
-    /* border: solid black; */
-    /* border-style:double; */
+    
     background-color:rgb(229, 182, 205);
     border-radius: 40px;
     height: 80vh;
@@ -23,22 +22,13 @@ body
     box-shadow: 2px 6px 10px;
 }
 
-h3
-{
-  position: relative;
-  top: -40px;
-}
+h1{
+    font-size: 30px;
+  }
 
-.information
+  #inputInfo
 {
-    /* border: solid black;
-    background-color: white;
-    border-radius: 10px;
-    height: 100px;
-    margin: 10px;
-    margin-top: -40px;
-    text-align: left;
-    padding-left: 5px; */
+    
     border: solid black;
     background-color: white;
     border-radius: 10px;
@@ -57,7 +47,7 @@ h3
 
    
 
-#inputText
+.inputText
 {
     width: 60px;
     height: 25px;
