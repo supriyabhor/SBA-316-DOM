@@ -196,13 +196,22 @@ function randomWord() {
         const inputElement = document.createElement('input');
         inputElement.setAttribute('type', 'text');
         inputElement.setAttribute('maxlength', '1'); // Only one letter per input
+
+        inputElement.classList.add('inputAppend');
         inputs.append(inputElement); // Using append() to add input elements
+
+        inputText.value = '';
+        inputText.focus();
     }
+   
 }
+
+
 
 randomWord();
 
-function initGame(e) {
+function initGame(e) 
+{
     let key = e.target.value.toLowerCase();
     if (key.match(/^[A-Za-z]+$/) && !correctLetter.includes(key)) {
         if (word.includes(key)) {
