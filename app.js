@@ -52,18 +52,6 @@ let wordData= [
         word : "Jupiter"
    },
    {
-        hind : "In which US city is Broadway located?",
-        word : "New York City"
-   },
-   {
-        hind :  "Which country invented tea?",
-        word : "China"
-   },
-   {
-        hind : "Which organ has four chambers?",
-        word : "heart"
-   },
-   {
         hind : "Which continent is the largest?",
         word : "Asia"
    },
