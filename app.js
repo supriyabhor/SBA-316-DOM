@@ -160,3 +160,9 @@ function startGame(g)
 
 
 inputTextTab.addEventListener("input". startGame);
+wordDisplay.addEventListener("click", () => inputTextTab.focus());
+document.addEventListener("keydown", ()=> inputTextTab.focus());
+resetButton.addEventListener("click", ()=> {
+    randomWord();
+    output.Style.disply= "none";
+})
