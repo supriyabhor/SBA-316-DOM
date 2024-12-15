@@ -72,7 +72,7 @@ h1{
     margin-left: 10px;
 }
 
-.reset-btn
+#reset-btn
 {
     height: 30px;
     margin: 10px;
@@ -84,7 +84,7 @@ h1{
     
 }
 
-.reset-btn:hover
+#reset-btn:hover
 {
     background: #e17cb2;
 }
