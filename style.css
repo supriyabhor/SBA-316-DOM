@@ -11,7 +11,7 @@ body
 
 .mainContainer
 {
-    
+   
     background-color:rgb(229, 182, 205);
     border-radius: 40px;
     height: 80vh;
@@ -35,7 +35,7 @@ h1{
     height: 100px;
     margin: 10px;
     margin-top: -40px;
-    text-align: left;
+  
     padding-left: 5px;
     align-items: center;
 }
@@ -43,14 +43,17 @@ h1{
 
 
 .inputText
-{
-    width: 60px;
-    height: 25px;
+ {  
+
+    height: 20px;
+    width: 50px;
+    margin: 10px;
+    padding: 5px;
+    justify-content:center;
     text-align: center;
-    margin-left: 90px;
-    margin-bottom: 20px;
-   
-}
+    align-items: center;
+    
+   }
 
 
 
@@ -59,7 +62,8 @@ h1{
     border: solid black;
     background-color: aliceblue;
     border-radius: 10px;
-   height: auto;
+    height: auto;
+    text-align: left;
 }
 
 .information p
@@ -73,9 +77,10 @@ h1{
     height: 30px;
     margin: 10px;
     padding-top: 5px;
-    display: flex;
+    /* display: flex; */
     justify-content:center;
-    margin-left: 90px;
+  
+    align-items: center;
     
 }
 
