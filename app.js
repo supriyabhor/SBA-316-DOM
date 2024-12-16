@@ -145,10 +145,6 @@ let wordData= [
         hint: "small piece of metal"
     },
     {
-        word: "H2O",
-        hint: "What is the chemical symbol for water?"
-    },
-    {
         word: "paris",
         hint: "the capital city of France?"
     },
@@ -200,7 +196,6 @@ function randomWord()
         const inputElement = document.createElement('input');
         inputElement.setAttribute('type', 'text');
         inputElement.setAttribute('maxlength', '1'); // Only one letter per input
-
         inputElement.classList.add('inputAppend');
         inputs.append(inputElement); // Using append() to add input elements
      
