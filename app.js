@@ -126,7 +126,7 @@ let wordData= [
     },
     {
         word: "oxygen",
-        hint: " Which gas do humans breathe in?"
+        hint: "  Which gas do humans breathe in?"
     },
     {
         word: "yen",
@@ -145,7 +145,7 @@ let wordData= [
         hint: "small piece of metal"
     },
     {
-        word: "h2o",
+        word: "H2O",
         hint: "What is the chemical symbol for water?"
     },
     {
@@ -181,7 +181,8 @@ function randomWord()
 {
     let randomItm = wordData[Math.floor(Math.random() * wordData.length)];
     word = randomItm.word;
-    if (word.length >= 5) {
+    if (word.length >= 5) 
+    {
         maxCheck = 6;
     }
 
@@ -208,12 +209,18 @@ function randomWord()
 
 randomWord();
 
-function gameFunction(e) {
+function gameFunction(e) 
+{
     let key = e.target.value.toLowerCase();
-    if(key.match(/^[A-Za-z]+$/) &&  !correctLetter.includes(key)) {
-        if(word.includes(key)) {
-            for (let i = 0; i < word.length; i++) {
-                if(word[i] == key) {
+    if(key.match(/^[A-Za-z]+$/) &&  !correctLetter.includes(key))
+         {
+        if(word.includes(key)) 
+            {
+            for (let i = 0; i < word.length; i++) 
+                {
+                if(word[i] == key) 
+                    
+                {
                     correctLetter += key;
                     inputs.querySelectorAll("input")[i].value = key;
                 }
@@ -225,20 +232,22 @@ function gameFunction(e) {
         guessLeft.innerText = maxCheck;
    
     }
-    // inputText.value = "";
+    //  inputText.value = "";
     let typetext= inputText.value;
-    console.log(inputText);
+    console.log(typetext);
 
 
-    checkFunction(() => {
+    checkFunction(() => 
+        {
         if(correctLetter.length === word.length) 
             {
-                alert(`Congrats! You found the word ${word.toUpperCase()}`);
-                return randomWord();
-            
-        } else if(maxCheck < 1) {
+            alert(`Congrats! correct word is: ${word.toUpperCase()}`);
+            return randomWord();
+        } else if(maxCheck < 1)
+             {
             alert("Game over! You don't have remaining guesses");
-            for(let i = 0; i < word.length; i++) {
+            for(let i = 0; i < word.length; i++)
+             {
                 inputs.querySelectorAll("input")[i].value = word[i];
             }
         }
