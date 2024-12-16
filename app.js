@@ -233,9 +233,9 @@ function gameFunction(e) {
     checkFunction(() => {
         if(correctLetter.length === word.length) 
             {
-               
-            alert(`Congrats! You found the word ${word.toUpperCase()}`);
-            return randomWord();
+                alert(`Congrats! You found the word ${word.toUpperCase()}`);
+                return randomWord();
+            
         } else if(maxCheck < 1) {
             alert("Game over! You don't have remaining guesses");
             for(let i = 0; i < word.length; i++) {
