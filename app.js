@@ -233,8 +233,7 @@ function gameFunction(e)
     console.log(typetext);
 
 
-    checkFunction(() => 
-        {
+    checkFunction(() => {
         if(correctLetter.length === word.length) 
             {
             alert(`Congrats! correct word is: ${word.toUpperCase()}`);
