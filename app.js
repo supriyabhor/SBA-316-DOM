@@ -126,7 +126,7 @@ let wordData= [
     },
     {
         word: "oxygen",
-        hint: "  Which gas do humans breathe in?"
+        hint: " Which gas do humans breathe in?"
     },
     {
         word: "yen",
@@ -145,7 +145,7 @@ let wordData= [
         hint: "small piece of metal"
     },
     {
-        word: "H2O",
+        word: "h2o",
         hint: "What is the chemical symbol for water?"
     },
     {
@@ -182,7 +182,7 @@ function randomWord()
     let randomItm = wordData[Math.floor(Math.random() * wordData.length)];
     word = randomItm.word;
     if (word.length >= 5) {
-        maxCheck = 7;
+        maxCheck = 6;
     }
 
     correctLetter = [];
@@ -208,7 +208,7 @@ function randomWord()
 
 randomWord();
 
-function initGame(e) {
+function gameFunction(e) {
     let key = e.target.value.toLowerCase();
     if(key.match(/^[A-Za-z]+$/) &&  !correctLetter.includes(key)) {
         if(word.includes(key)) {
@@ -230,10 +230,10 @@ function initGame(e) {
     console.log(inputText);
 
 
-    setTimeout(() => {
+    checkFunction(() => {
         if(correctLetter.length === word.length) 
             {
-            
+               
             alert(`Congrats! You found the word ${word.toUpperCase()}`);
             return randomWord();
         } else if(maxCheck < 1) {
@@ -248,6 +248,6 @@ function initGame(e) {
 
 
 resetBtn.addEventListener("click", randomWord);
-inputText.addEventListener("input", initGame);
+inputText.addEventListener("input", gameFunction);
 inputs.addEventListener("click", () => inputText.focus());
 document.addEventListener("keydown", () => inputText.focus());
