@@ -177,11 +177,12 @@ function randomWord()
 {
     let randomItm = wordData[Math.floor(Math.random() * wordData.length)];
     word = randomItm.word;
-    if (word.length >= 5) 
+   
+    if (word.length >=5)
     {
-        maxCheck = 6;
+        maxCheck  =6;
     }
-
+    // correctLetter =[];
     correctLetter = [];
     hintTag.innerText = randomItm.hint;
     guessLeft.innerText = maxCheck;
