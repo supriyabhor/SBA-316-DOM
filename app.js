@@ -12,17 +12,8 @@ let wordData= [
         hint: "a purpose or intention"
     },
     {
-        word: "venus",
-        hint: "planet of our solar system"
-    },
-   
-    {
         word: "coding",
         hint: "related to programming"
-    },
-    {
-        word: "matrix",
-        hint: "science fiction movie"
     },
     {
         word: "bugs",
@@ -37,19 +28,15 @@ let wordData= [
         hint: "a yellow precious metal"
     },
     {
-        word: "ebay",
+        word: "amazon",
         hint: "online shopping site"
-    },
-    {
-        word: "golang",
-        hint: "programming language"
     },
     {
         word: "island",
         hint: "land surrounded by water"
     },
     {
-        word: "hockey",
+        word: "football",
         hint: "a famous outdoor game"
     },
     {
@@ -57,7 +44,7 @@ let wordData= [
         hint: "related to an indoor game"
     },
     {
-        word: "viber",
+        word: "facebook",
         hint: "a social media app"
     },
     {
@@ -106,19 +93,11 @@ let wordData= [
     },
     {
         word: "mars",
-        hint: "planet of our solar system"
-    },
-    {
-        word: "mars",
         hint: " which planet is a red planet"
     },
     {
         word: "Fall",
         hint: "Which season comes after summer when leaves fall from trees?"
-    },
-    {
-        word: "Blue Whale",
-        hint: " the largest mammal in the world?"
     },
     {
         word: "mercury",
@@ -173,6 +152,8 @@ const guessLeft = document.querySelector(".guess-left span");
 
 const resetBtn = document.getElementById("reset-btn");
 
+inputText.addEventListener("input", gameFunction);
+
 function randomWord() 
 {
     let randomItm = wordData[Math.floor(Math.random() * wordData.length)];
@@ -182,7 +163,7 @@ function randomWord()
     {
         maxCheck  =6;
     }
-    // correctLetter =[];
+   
     correctLetter = [];
     hintTag.innerText = randomItm.hint;
     guessLeft.innerText = maxCheck;
@@ -221,38 +202,31 @@ function gameFunction(e)
                     inputs.querySelectorAll("input")[i].value = key;
                 }
             }
-        } else {
+        } else 
+        {
             maxCheck--;
           
         }
         guessLeft.innerText = maxCheck;
-   
-    }
-    //  inputText.value = "";
-    let typetext= inputText.value;
-    console.log(typetext);
 
-
-    checkFunction(() => {
-        if(correctLetter.length === word.length) 
-            {
+        if (correctLetter.length === word.length) {
             alert(`Congrats! correct word is: ${word.toUpperCase()}`);
-            return randomWord();
-        } else if(maxCheck < 1)
-             {
+            randomWord();
+        } else if (maxCheck < 1) {
             alert("Game over! You don't have remaining guesses");
-            for(let i = 0; i < word.length; i++)
-             {
-                
-                inputs.querySelectorAll("input")[i].value =word [i];
+            // Show the word for the player to see
+            for (let i = 0; i < word.length; i++) {
+                inputs.querySelectorAll("input")[i].value = word[i];
             }
         }
-    }, 100);
+     }  
 }
+    
+
+resetBtn.addEventListener("click", () => 
+    {
+        randomWord();
+        inputText.focus(); 
+    });
 
 
-
-resetBtn.addEventListener("click", randomWord);
-inputText.addEventListener("input", gameFunction);
-inputs.addEventListener("click", () => inputText.focus());
-document.addEventListener("keydown", () => inputText.focus());
